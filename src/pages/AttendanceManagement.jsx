@@ -70,7 +70,7 @@ const AttendanceManagement = () => {
       <h2>Attendance Management</h2>
 
       {/* Attendance Form */}
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px" }}>
+      <div style={{ display: "flex", gap: "10px", marginBottom: "20px",background:"white"}}>
         <select onChange={e => setNewAttendance({ ...newAttendance, employee_id: e.target.value })}>
           <option value="">Select Employee</option>
           {employees.map(emp => (

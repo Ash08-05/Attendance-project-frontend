@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../components/OvertimeManagement.css" // Import CSS
 
 const OvertimeManagement = () => {
-
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL; 
 
   const [employees, setEmployees] = useState([]);
@@ -137,20 +135,119 @@ const OvertimeManagement = () => {
           </tr>
         </thead>
         <tbody>
-  {overtime.map((record) => (
-    <tr key={record.id}>
-      <td>{record.employee_name}</td>
-      <td>{new Date(record.date).toLocaleString()}</td> {/* Display Date & Time */}
-      <td>{record.hours}</td>
-      <td>
-        <button onClick={() => handleEditOvertime(record)} className="edit-btn">Edit</button>
-        <button onClick={() => handleDeleteOvertime(record.id)} className="delete-btn">Delete</button>
-      </td>
-    </tr>
-  ))}
-</tbody>
-
+          {overtime.map((record) => (
+            <tr key={record.id}>
+              <td>{record.employee_name}</td>
+              <td>{new Date(record.date).toLocaleString()}</td> {/* Display Date & Time */}
+              <td>{record.hours}</td>
+              <td>
+                <button onClick={() => handleEditOvertime(record)} className="edit-btn">Edit</button>
+                <button onClick={() => handleDeleteOvertime(record.id)} className="delete-btn">Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
       </table>
+
+      {/* Inline CSS Styling */}
+      <style>
+        {`
+          .overtime-container {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+          }
+
+          h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+          }
+
+          .overtime-form {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            color: black;
+          }
+
+          .overtime-form label {
+            font-weight: bold;
+          }
+
+          .overtime-form select, 
+          .overtime-form input {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: black;
+            background-color: #ffffff;
+          }
+
+          .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .submit-btn:hover {
+            background-color: #0056b3;
+          }
+
+          .overtime-summary {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            color: black;
+          }
+
+          .overtime-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+          }
+
+          .overtime-table th, .overtime-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            color: black;
+          }
+
+          .overtime-table th {
+            background: #007bff;
+            color: white;
+          }
+
+          .edit-btn {
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+
+          .delete-btn {
+            background: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+        `}
+      </style>
     </div>
   );
 };
