@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <nav
       style={{
-        background: "#333",
+        background: "#578FCA",
         padding: "10px 20px",
-        color: "#fff",
+        color: "white",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",

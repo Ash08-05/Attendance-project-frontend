@@ -119,8 +119,8 @@ const OvertimeManagement = () => {
 
       {/* Summary Section */}
       <div className="overtime-summary">
-        <p>🟢 Weekly Overtime: {summary.weekly} hours</p>
-        <p>🔵 Monthly Overtime: {summary.monthly} hours</p>
+        <p>Weekly Overtime: {summary.weekly} hours</p>
+        <p>Monthly Overtime: {summary.monthly} hours</p>
       </div>
 
       {/* Overtime Records Table */}
@@ -189,7 +189,7 @@ const OvertimeManagement = () => {
           }
 
           .submit-btn {
-            background-color: #007bff;
+            background-color:#3674B5;
             color: white;
             padding: 10px;
             border: none;
@@ -225,7 +225,7 @@ const OvertimeManagement = () => {
           }
 
           .overtime-table th {
-            background: #007bff;
+            background:#3674B5;
             color: white;
           }
 

@@ -11,7 +11,7 @@ const ReportsPage = () => {
     fetch(`${API_BASE_URL}/report`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("📊 Fetched Report Data:", data); // Debugging
+        console.log("Fetched Report Data:", data); // Debugging
         setReports(data);
       })
       .catch((err) => console.error("❌ Error fetching reports:", err));
@@ -75,7 +75,7 @@ const ReportsPage = () => {
         style={{
           marginTop: "20px",
           padding: "10px 20px",
-          background: "#28a745",
+          background: "#4C7B8B",
           color: "white",
           border: "none",
           cursor: "pointer",
@@ -92,6 +92,7 @@ const thStyle = {
   padding: "10px",
   border: "1px solid #ddd",
   textAlign: "left",
+  background:"#3674B5",
 };
 
 const tdStyle = {

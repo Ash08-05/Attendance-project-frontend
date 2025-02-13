@@ -70,23 +70,23 @@ const AttendanceManagement = () => {
       <h2>Attendance Management</h2>
 
       {/* Attendance Form */}
-      <div style={{ display: "flex", gap: "10px", marginBottom: "20px",background:"white"}}>
-        <select onChange={e => setNewAttendance({ ...newAttendance, employee_id: e.target.value })}>
+      <div style={{ display: "flex", gap: "10px", marginBottom: "20px",color:"black"}}>
+        <select onChange={e => setNewAttendance({ ...newAttendance, employee_id: e.target.value })} style={{background:"white",color:"black",borderRadius:"4px" }}>
           <option value="">Select Employee</option>
           {employees.map(emp => (
             <option key={emp.id} value={emp.id}>{emp.name}</option>
           ))}
         </select>
 
-        <input type="date" onChange={e => setNewAttendance({ ...newAttendance, date: e.target.value })} />
+        <input type="date" onChange={e => setNewAttendance({ ...newAttendance, date: e.target.value })} style={{background:"white",color:"black",borderRadius:"4px" }}/>
 
-        <select onChange={e => setNewAttendance({ ...newAttendance, status: e.target.value })}>
+        <select onChange={e => setNewAttendance({ ...newAttendance, status: e.target.value })} style={{background:"white",color:"black",borderRadius:"4px" }}>
           <option value="Present">Present</option>
           <option value="Absent">Absent</option>
           <option value="On Leave">On Leave</option>
         </select>
 
-        <button onClick={handleMarkAttendance} style={{ padding: "5px 10px", cursor: "pointer" }}>
+        <button onClick={handleMarkAttendance} style={{ padding: "5px 10px", cursor: "pointer",background:"#3674B5" }}>
           Mark Attendance
         </button>
       </div>
@@ -95,10 +95,10 @@ const AttendanceManagement = () => {
       <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "10px" }}>
         <thead>
           <tr style={{ background: "#f4f4f4", textAlign: "left" }}>
-            <th style={{ padding: "8px", border: "1px solid #ddd",background:"blue" }}>Employee Name</th>
-            <th style={{ padding: "8px", border: "1px solid #ddd",background:"blue" }}>Date</th>
-            <th style={{ padding: "8px", border: "1px solid #ddd",background:"blue" }}>Status</th>
-            <th style={{ padding: "8px", border: "1px solid #ddd",background:"blue" }}>Actions</th>
+            <th style={{ padding: "8px", border: "1px solid #ddd",background:"#3674B5" }}>Employee Name</th>
+            <th style={{ padding: "8px", border: "1px solid #ddd",background:"#3674B5" }}>Date</th>
+            <th style={{ padding: "8px", border: "1px solid #ddd",background:"#3674B5" }}>Status</th>
+            <th style={{ padding: "8px", border: "1px solid #ddd",background:"#3674B5" }}>Actions</th>
           </tr>
         </thead>
         <tbody>
