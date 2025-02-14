@@ -72,7 +72,7 @@ const EmployeeManagement = () => {
       {/* Add Employee Form */}
       <div style={{ marginBottom: "20px" }}>
         <h3>Add Employee</h3>
-        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+        <div style={{ display: "flex", gap: "10px", flexWrap: "wrap", }}>
           <input
             type="text"
             name="name"
@@ -85,6 +85,7 @@ const EmployeeManagement = () => {
               borderRadius: "4px",
               flex: "1",
               backgroundColor: "white",
+              color:"black",
             }}
           />
           <input
@@ -99,6 +100,7 @@ const EmployeeManagement = () => {
               borderRadius: "4px",
               flex: "1",
               backgroundColor: "white",
+              color:"black",
             }}
           />
           <input
@@ -113,6 +115,7 @@ const EmployeeManagement = () => {
               borderRadius: "4px",
               flex: "1",
               backgroundColor: "white",
+              color:"black",
             }}
           />
           <input
@@ -127,6 +130,7 @@ const EmployeeManagement = () => {
               borderRadius: "4px",
               flex: "1",
               backgroundColor: "white",
+              color:"black",
             }}
           />
           <button
